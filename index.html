@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>掌上高考</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="weixin">
+			<p>掌上高考公众号</p>
+			<img src="img/QRcode2.png">
+		</div>
+		<div class="section page1">
+			<div class="center page1 page1Block">
+				<div class="left img">
+					<div class="roll"></div>
+					<div class="people"></div>
+					<div class="phone"></div>
+					<div class="hand"></div>
+				</div>
+				<div class="right text fadein">
+					<img src="img/logo.png" class="logo">
+					<p class="txt">您掌上的志愿填报专家</p>
+					<div class="download">
+						<a class="left btn" href="http://i.wen.eol.cn/down/last?source=2">安卓版</a>
+						<a class="right btn" href="http://itunes.apple.com/cn/app/id1086459132?mt=8">苹果版</a>
+					</div>
+					<div class="QRcode">
+						<img src="img/QRcode.png">
+						<p>手机扫码下载掌上高考app</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page2">
+			<div class="center">
+				<div class="left text">
+					<h2>掌上高考</h2>
+		            <h3>估分选大学+查学校+查专业</h3>
+		            <p>来源于官方机构和高校的数百万<br>条权威高考数据</p>
+				</div>
+				<div class="right img">
+					<img src="img/page2-img.png">
+				</div>
+			</div>
+		</div>
+		<div class="section page3">
+			<div class="center">
+				<div class="right text">
+					<h2>高考头条</h2>
+		            <h3>新鲜的热点资讯</h3>
+		            <p>报考、院校、专业、政策，让您不错过每一个高考热点</p>
+				</div>
+				<div class="left img">
+					<img src="img/page3-img.png">
+				</div>
+			</div>
+		</div>
+		<div class="section page4">
+			<div class="center">
+				<div class="left text">
+					<h2>专家<span>答疑</span></h2>
+		            <h3>数百位专家免费在线答疑</h3>
+		            <p>志愿填报、高考专业、学习经验、<br>心理辅导，全方位助力高考</p>
+				</div>
+				<div class="right img">
+					<img src="img/page4-img.png">
+				</div>
+			</div>
+		</div>
+		<div class="section page5">
+			<div class="center opacity0">
+				<h4>志愿填报</h4>
+                <h5>一起找个靠谱的</h5>
+                <div class="download QRcode_bottom">
+                    <div class="left">
+                        <img src="img/page5-img.png">
+                    </div>
+                    <div class="right">
+                        <img src="img/QRcode.png">
+                        <p>手机扫码下载掌上高考app</p>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div class="right" id="fullPage-nav">
+			<ul></ul>
+		</div>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui-1.10.3.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".page1 .img .roll").addClass("zoomIn");
+				setTimeout('$(".page1 .img .phone").addClass("circle")', 1000);
+				setTimeout('$(".page1 .img .hand").animate({bottom:"0px"},1000)', 1800);
+				setTimeout('$(".page1 .img .people").addClass("show")', 1800);
+				setTimeout('$(".page1 .fadein").fadeIn(2000)', 3000);
+				setTimeout('$(".page1 .text .QRcode").addClass("bounce")', 5000);
+				$.fn.fullpage({
+		            anchors: ['page1', 'page2', 'page3', 'page4' ,'page5'],
+		            'navigation': true,
+		            'navigationPosition': 'right',
+		            'resize': true,
+		            afterLoad: function(anchorLink, index){
+		                if(index == '1'){
+		                   $(".page1 .text .QRcode").addClass("bounce")
+		                   setTimeout('$(".page1 .text .weixin").addClass("bounce")',2000);
+		                }
+		                if(index == '2'){
+		                    $(".weixin").addClass("show");
+		                    $(".weixin").css("top","12em");
+		                    $('.page2 .center .text').addClass("fadeInLeft");
+		                    $('.page2 .center .img').addClass("fadeInRight");
+		                }
+		                if(index == '3'){
+		                	$(".weixin").addClass("show");
+		                    $(".weixin").css("top","12em");
+		                    $('.page3 .center .img').addClass("fadeInLeft");
+		                    $('.page3 .center .text').addClass("fadeInRight");
+		                }
+		                if(index == '4'){
+		                	$(".weixin").addClass("show");
+		                    $(".weixin").css("top","12em");
+		                    $('.page4 .center .text').addClass("fadeInLeft");
+		                    $('.page4 .center .img').addClass("fadeInRight");
+		                }
+		                if(index == "5"){
+		                	$(".weixin").addClass("show");
+		                    $(".weixin").css("top","12em");
+		                    var slide5_top = ($(window).height() - $(".page5 .center").height() - $(".footer").height()) / 2;
+		                    $(".page5 .center").css("margin-top",slide5_top);
+		                    $('.page5 .center').addClass("zoomIn");
+		                }
+		            },
+		            onLeave: function(index, direction){
+		                if(index == '1'){
+		                    $(".page1 .center .text .QRcode").removeClass("bounce")
+		                    $(".page1 .center .text .weixin").removeClass("bounce")
+		                }
+		                if(index == '2'){
+		                    $('.page2 .center .text').removeClass("fadeInLeft");
+		                    $('.page2 .center .img').removeClass("fadeInRight");
+		                }
+		                if(index == '3'){
+		                    $('.page3 .center .img').removeClass("fadeInLeft");
+		                    $('.page3 .center .text').removeClass("fadeInRight");
+		                }
+		                if(index == '4'){
+		                    $('.page4 .center .text').removeClass("fadeInLeft");
+		                    $('.page4 .center .img').removeClass("fadeInRight");
+		                }
+		                if(index == '5'){
+		                    $('.page5 .center').removeClass("zoomIn");
+		                }
+		                
+		            }
+		        });
+			});
+			
+			//自适应高度
+			var eol_txt_h = ($(window).height() - $(".page1 .fadein").height()) / 2;
+			$(".page1 .fadein").css("margin-top", eol_txt_h)
+		</script>
+		
+	</body>
+
+</html>

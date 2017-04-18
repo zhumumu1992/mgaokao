@@ -1,0 +1,56 @@
+.clear {
+  display: block;
+  *zoom: 1;
+}
+.clear:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+#box {
+  height: 100%;
+  position: relative;
+}
+.weixin {
+  position: fixed;
+  right: -112px;
+  top: 0;
+  width: 180px;
+  text-align: center;
+  z-index: 10000;
+  background: url(../img/people2.png) no-repeat left top;
+  transition: 0.6s all;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.weixin img {
+  display: block;
+  padding: 9px;
+  border-radius: 3px;
+  background: #4c9bf5;
+  margin: -5px 0 0 68px;
+  width: 92px;
+}
+.weixin p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background: #4c9bf5;
+  margin-left: 68px;
+  line-height: 22px;
+  border-radius: 7px 7px 0 0;
+  margin-top: 40px;
+  width: 110px;
+}
+.weixin:hover {
+  right: 0;
+  transition: 0.6s all;
+}
+.weixin.show {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
