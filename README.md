@@ -1,37 +1,5 @@
-## Welcome to GitHub Pages
+# 模拟掌上高考 地址：https://429461542zsl.github.io/mgaokao/
+## 主要使用了CSS3动画完成各种文字效果，和加载图片效果。
 
-You can use the [editor on GitHub](https://github.com/429461542zsl/mgaokao/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/429461542zsl/mgaokao/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## jQuery全屏滚动插件fullPage.js是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站。
+## 介绍地址：http://www.jq22.com/jquery-info1124
